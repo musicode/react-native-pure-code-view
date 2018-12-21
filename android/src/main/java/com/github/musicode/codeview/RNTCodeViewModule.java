@@ -15,7 +15,7 @@ public class RNTCodeViewModule extends ReactContextBaseJavaModule {
 
   @Override
   public String getName() {
-    return "RNTChatView";
+    return "RNTCodeView";
   }
 
 }
