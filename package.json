@@ -1,0 +1,27 @@
+{
+  "name": "react-native-pure-code-view",
+  "version": "0.0.1",
+  "description": "react native code view",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/musicode/react-native-pure-code-view.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "code view"
+  ],
+  "author": "musicode",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/musicode/react-native-pure-code-view/issues"
+  },
+  "homepage": "https://github.com/musicode/react-native-pure-code-view#readme",
+  "dependencies": {
+    "prop-types": "^15.6.2"
+  }
+}
