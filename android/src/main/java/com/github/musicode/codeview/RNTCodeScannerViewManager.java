@@ -3,7 +3,6 @@ package com.github.musicode.codeview;
 import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.support.v4.content.ContextCompat;
-import android.view.View;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.bridge.Arguments;
@@ -106,11 +105,17 @@ public class RNTCodeScannerViewManager extends SimpleViewManager<RNTCodeScanner>
                     scanner.postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            scanner.measure(
-                                    View.MeasureSpec.makeMeasureSpec(scanner.getWidth(), View.MeasureSpec.EXACTLY),
-                                    View.MeasureSpec.makeMeasureSpec(scanner.getHeight(), View.MeasureSpec.EXACTLY)
-                            );
-                            scanner.layout(scanner.getLeft(), scanner.getTop(), scanner.getRight(), scanner.getBottom());
+                            scanner.forceUpdate();
+                        }
+                    }, 500);
+                }
+
+                @Override
+                public void onPreviewingChange(boolean b) {
+                    scanner.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            scanner.forceUpdate();
                         }
                     }, 500);
                 }
