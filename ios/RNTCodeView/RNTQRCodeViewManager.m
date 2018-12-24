@@ -7,8 +7,7 @@
 RCT_EXPORT_MODULE()
 
 - (UIView *)view {
-    QRCodeView *view = [QRCodeView new];
-    return view;
+    return [QRCodeView new];
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(text, NSString, QRCodeView) {

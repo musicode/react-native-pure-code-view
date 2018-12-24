@@ -7,8 +7,7 @@
 RCT_EXPORT_MODULE()
 
 - (UIView *)view {
-    BarCodeView *view = [BarCodeView new];
-    return view;
+    return [BarCodeView new];
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(text, NSString, BarCodeView) {

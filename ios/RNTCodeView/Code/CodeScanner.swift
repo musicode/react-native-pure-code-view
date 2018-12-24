@@ -157,6 +157,7 @@ public class CodeScanner: UIView {
         addPreview()
         
         captureSession.startRunning()
+        captureSession.stopRunning()
         
         isPreviewing = true
         
@@ -235,6 +236,10 @@ public class CodeScanner: UIView {
     }
     
     private func addPreview() {
+        
+        if let capturePreviewLayer = capturePreviewLayer {
+            capturePreviewLayer.removeFromSuperlayer()
+        }
         
         let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         previewLayer.videoGravity = .resizeAspectFill
