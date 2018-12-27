@@ -157,7 +157,6 @@ public class CodeScanner: UIView {
         addPreview()
         
         captureSession.startRunning()
-        captureSession.stopRunning()
         
         isPreviewing = true
         

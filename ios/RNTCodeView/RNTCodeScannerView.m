@@ -12,13 +12,9 @@
     self = [super init];
     if (self) {
         CodeScanner *scanner = [CodeScanner new];
-        
         [scanner initWithConfiguration:[CodeScannerConfiguration new] delegate:self];
-        
         [self addSubview:scanner];
-        
         scanner.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        
         _scanner = scanner;
     }
     return self;
