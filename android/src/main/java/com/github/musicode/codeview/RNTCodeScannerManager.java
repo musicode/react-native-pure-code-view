@@ -24,18 +24,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class RNTCodeScannerViewManager extends SimpleViewManager<RNTCodeScanner> {
+public class RNTCodeScannerManager extends SimpleViewManager<RNTCodeScanner> {
 
     private final ReactApplicationContext reactAppContext;
 
-    public RNTCodeScannerViewManager(ReactApplicationContext reactContext) {
+    public RNTCodeScannerManager(ReactApplicationContext reactContext) {
         super();
         this.reactAppContext = reactContext;
     }
 
     @Override
     public String getName() {
-        return "RNTCodeScannerView";
+        return "RNTCodeScanner";
     }
 
     @Override
@@ -100,25 +100,6 @@ public class RNTCodeScannerViewManager extends SimpleViewManager<RNTCodeScanner>
                     reactContext.getJSModule(RCTEventEmitter.class).receiveEvent(scanner.getId(), "onPermissionsDenied", null);
                 }
 
-                @Override
-                public void onSizeChange() {
-                    scanner.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            scanner.forceUpdate();
-                        }
-                    }, 500);
-                }
-
-                @Override
-                public void onPreviewingChange(boolean b) {
-                    scanner.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            scanner.forceUpdate();
-                        }
-                    }, 500);
-                }
             }
         );
 

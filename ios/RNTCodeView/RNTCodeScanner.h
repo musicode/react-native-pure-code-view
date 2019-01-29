@@ -2,7 +2,7 @@
 #import <React/RCTViewManager.h>
 #import "RNTCodeView-Swift.h"
 
-@interface RNTCodeScannerView : UIView
+@interface RNTCodeScanner : UIView
 
 @property (nonatomic, weak) CodeScanner *scanner;
 

@@ -17,8 +17,8 @@
 		9D921E7E21CBB7DD0083C779 /* BarCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D921E7621CBB7DD0083C779 /* BarCodeView.swift */; };
 		9D921E7F21CBB7DD0083C779 /* CodeScannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D921E7821CBB7DD0083C779 /* CodeScannerDelegate.swift */; };
 		9D921E8421CBDECE0083C779 /* RNTQRCodeViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D921E8321CBDECE0083C779 /* RNTQRCodeViewManager.m */; };
-		9D921E8721CBE0030083C779 /* RNTCodeScannerViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D921E8621CBE0030083C779 /* RNTCodeScannerViewManager.m */; };
-		9D921E8A21CBE2500083C779 /* RNTCodeScannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D921E8921CBE2500083C779 /* RNTCodeScannerView.m */; };
+		9D921E8721CBE0030083C779 /* RNTCodeScannerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D921E8621CBE0030083C779 /* RNTCodeScannerManager.m */; };
+		9D921E8A21CBE2500083C779 /* RNTCodeScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D921E8921CBE2500083C779 /* RNTCodeScanner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,10 +47,10 @@
 		9D921E7821CBB7DD0083C779 /* CodeScannerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeScannerDelegate.swift; sourceTree = "<group>"; };
 		9D921E8221CBDECE0083C779 /* RNTQRCodeViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNTQRCodeViewManager.h; sourceTree = "<group>"; };
 		9D921E8321CBDECE0083C779 /* RNTQRCodeViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTQRCodeViewManager.m; sourceTree = "<group>"; };
-		9D921E8521CBE0030083C779 /* RNTCodeScannerViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNTCodeScannerViewManager.h; sourceTree = "<group>"; };
-		9D921E8621CBE0030083C779 /* RNTCodeScannerViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTCodeScannerViewManager.m; sourceTree = "<group>"; };
-		9D921E8821CBE2500083C779 /* RNTCodeScannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNTCodeScannerView.h; sourceTree = "<group>"; };
-		9D921E8921CBE2500083C779 /* RNTCodeScannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTCodeScannerView.m; sourceTree = "<group>"; };
+		9D921E8521CBE0030083C779 /* RNTCodeScannerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNTCodeScannerManager.h; sourceTree = "<group>"; };
+		9D921E8621CBE0030083C779 /* RNTCodeScannerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTCodeScannerManager.m; sourceTree = "<group>"; };
+		9D921E8821CBE2500083C779 /* RNTCodeScanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNTCodeScanner.h; sourceTree = "<group>"; };
+		9D921E8921CBE2500083C779 /* RNTCodeScanner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTCodeScanner.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,10 +88,10 @@
 				9D921E2E21CBB6E60083C779 /* RNTBarCodeViewManager.m */,
 				9D921E8221CBDECE0083C779 /* RNTQRCodeViewManager.h */,
 				9D921E8321CBDECE0083C779 /* RNTQRCodeViewManager.m */,
-				9D921E8521CBE0030083C779 /* RNTCodeScannerViewManager.h */,
-				9D921E8621CBE0030083C779 /* RNTCodeScannerViewManager.m */,
-				9D921E8821CBE2500083C779 /* RNTCodeScannerView.h */,
-				9D921E8921CBE2500083C779 /* RNTCodeScannerView.m */,
+				9D921E8521CBE0030083C779 /* RNTCodeScannerManager.h */,
+				9D921E8621CBE0030083C779 /* RNTCodeScannerManager.m */,
+				9D921E8821CBE2500083C779 /* RNTCodeScanner.h */,
+				9D921E8921CBE2500083C779 /* RNTCodeScanner.m */,
 			);
 			path = RNTCodeView;
 			sourceTree = "<group>";
@@ -171,8 +171,8 @@
 				9D921E7A21CBB7DD0083C779 /* ViewFinder.swift in Sources */,
 				9D921E7B21CBB7DD0083C779 /* CodeScanner.swift in Sources */,
 				9D921E7E21CBB7DD0083C779 /* BarCodeView.swift in Sources */,
-				9D921E8721CBE0030083C779 /* RNTCodeScannerViewManager.m in Sources */,
-				9D921E8A21CBE2500083C779 /* RNTCodeScannerView.m in Sources */,
+				9D921E8721CBE0030083C779 /* RNTCodeScannerManager.m in Sources */,
+				9D921E8A21CBE2500083C779 /* RNTCodeScanner.m in Sources */,
 				9D921E7F21CBB7DD0083C779 /* CodeScannerDelegate.swift in Sources */,
 				9D921E7921CBB7DD0083C779 /* CodeScannerConfiguration.swift in Sources */,
 				9D921E7C21CBB7DD0083C779 /* CodeView.swift in Sources */,

@@ -28,7 +28,7 @@ public class RNTCodeViewPackage implements ReactPackage {
       return Arrays.<ViewManager>asList(
               new RNTBarCodeViewManager(reactContext),
               new RNTQRCodeViewManager(reactContext),
-              new RNTCodeScannerViewManager(reactContext)
+              new RNTCodeScannerManager(reactContext)
       );
     }
 }

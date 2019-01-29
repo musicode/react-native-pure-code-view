@@ -1,5 +1,6 @@
 package com.github.musicode.codeview;
 
+import android.view.Choreographer;
 import android.view.View;
 
 import com.facebook.react.bridge.LifecycleEventListener;
@@ -12,22 +13,30 @@ class RNTCodeScanner extends CodeScanner implements LifecycleEventListener {
 
     private Boolean isResuming = false;
 
+    private Choreographer.FrameCallback frameCallback = new Choreographer.FrameCallback() {
+        @Override
+        public void doFrame(long frameTimeNanos) {
+            for (int i = 0; i < getChildCount(); i++) {
+                View child = getChildAt(i);
+                child.measure(MeasureSpec.makeMeasureSpec(getMeasuredWidth(), MeasureSpec.EXACTLY),
+                        MeasureSpec.makeMeasureSpec(getMeasuredHeight(), MeasureSpec.EXACTLY));
+                child.layout(0, 0, child.getMeasuredWidth(), child.getMeasuredHeight());
+            }
+            getViewTreeObserver().dispatchOnGlobalLayout();
+            Choreographer.getInstance().postFrameCallback(this);
+        }
+    };
+
     public RNTCodeScanner(ThemedReactContext reactContext) {
         super(reactContext);
         reactContext.addLifecycleEventListener(this);
+        Choreographer.getInstance().postFrameCallback(frameCallback);
     }
 
     public void destroy() {
         stop();
         ((ThemedReactContext)getContext()).removeLifecycleEventListener(this);
-    }
-
-    public void forceUpdate() {
-        measure(
-            View.MeasureSpec.makeMeasureSpec(getWidth(), View.MeasureSpec.EXACTLY),
-            View.MeasureSpec.makeMeasureSpec(getHeight(), View.MeasureSpec.EXACTLY)
-        );
-        layout(getLeft(), getTop(), getRight(), getBottom());
+        Choreographer.getInstance().removeFrameCallback(frameCallback);
     }
 
     @Override
@@ -36,7 +45,6 @@ class RNTCodeScanner extends CodeScanner implements LifecycleEventListener {
         if (w > 0 && h > 0 && isResuming && !isStarted) {
             isStarted = true;
             start();
-            forceUpdate();
         }
     }
 
@@ -45,12 +53,10 @@ class RNTCodeScanner extends CodeScanner implements LifecycleEventListener {
         isResuming = true;
         if (isStarted) {
             resume();
-            forceUpdate();
         }
         else if (getWidth() > 0 && getHeight() > 0) {
             isStarted = true;
             start();
-            forceUpdate();
         }
     }
 

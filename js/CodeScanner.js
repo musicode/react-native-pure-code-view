@@ -50,7 +50,7 @@ class CodeScanner extends Component {
 
   render() {
     return (
-      <RNTCodeScannerView
+      <RNTCodeScanner
         {...this.props}
         onScanSuccess={this.handleScanSuccess}
         onScanWithoutPermissions={this.handleScanWithoutPermissions}
@@ -62,6 +62,6 @@ class CodeScanner extends Component {
 
 }
 
-const RNTCodeScannerView = requireNativeComponent('RNTCodeScannerView', CodeScanner)
+const RNTCodeScanner = requireNativeComponent('RNTCodeScanner', CodeScanner)
 
 export default CodeScanner

@@ -1,17 +1,17 @@
 
-#import "RNTCodeScannerViewManager.h"
+#import "RNTCodeScannerManager.h"
 #import "RNTCodeView-Swift.h"
-#import "RNTCodeScannerView.h"
+#import "RNTCodeScanner.h"
 
-@implementation RNTCodeScannerViewManager
+@implementation RNTCodeScannerManager
 
 RCT_EXPORT_MODULE()
 
 - (UIView *)view {
-    return [RNTCodeScannerView new];
+    return [RNTCodeScanner new];
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(title, NSString, RNTCodeScannerView) {
+RCT_CUSTOM_VIEW_PROPERTY(title, NSString, RNTCodeScanner) {
     view.scanner.guideTitle = [RCTConvert NSString:json];
 }
 

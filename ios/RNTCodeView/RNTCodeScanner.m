@@ -1,21 +1,20 @@
 
-#import "RNTCodeScannerView.h"
+#import "RNTCodeScanner.h"
 #import "RNTCodeView-Swift.h"
 
-@interface RNTCodeScannerView()<CodeScannerDelegate>
+@interface RNTCodeScanner()<CodeScannerDelegate>
 
 @end
 
-@implementation RNTCodeScannerView
+@implementation RNTCodeScanner
 
 - (instancetype)init {
     self = [super init];
     if (self) {
-        CodeScanner *scanner = [CodeScanner new];
-        [scanner initWithConfiguration:[CodeScannerConfiguration new] delegate:self];
-        [self addSubview:scanner];
-        scanner.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        _scanner = scanner;
+        CodeScanner *view = [[CodeScanner alloc] initWithConfiguration:[CodeScannerConfiguration new] delegate:self];
+        view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        [self addSubview:view];
+        self.scanner = view;
     }
     return self;
 }
