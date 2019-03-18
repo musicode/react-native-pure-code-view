@@ -50,14 +50,14 @@ public class RNTCodeScannerManager extends SimpleViewManager<RNTCodeScanner> {
         };
 
         scanner.init(
-            new CodeScannerConfiguration(scanner.getContext()) {
+            new CodeScannerConfiguration() {
                 @Override
                 public boolean requestPermissions(@NotNull List<String> permissions, int requestCode) {
 
                     List<String> list = new ArrayList<>();
 
                     for (String permission: permissions) {
-                        if (ContextCompat.checkSelfPermission(getContext(), permission) != PackageManager.PERMISSION_GRANTED) {
+                        if (ContextCompat.checkSelfPermission(reactContext, permission) != PackageManager.PERMISSION_GRANTED) {
                             list.add(permission);
                         }
                     }
