@@ -1,5 +1,5 @@
 import React, {
-  Component,
+  PureComponent,
 } from 'react'
 
 import {
@@ -9,7 +9,7 @@ import {
 
 import PropTypes from 'prop-types'
 
-class BarCodeView extends Component {
+class BarCodeView extends PureComponent {
 
   static propTypes = {
     text: PropTypes.string.isRequired,

@@ -1,5 +1,5 @@
 import React, {
-  Component,
+  PureComponent,
 } from 'react'
 
 import {
@@ -9,7 +9,7 @@ import {
 
 import PropTypes from 'prop-types'
 
-class CodeScanner extends Component {
+class CodeScanner extends PureComponent {
 
   static propTypes = {
     title: PropTypes.string.isRequired,

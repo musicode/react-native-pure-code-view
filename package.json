@@ -1,6 +1,6 @@
 {
   "name": "react-native-pure-code-view",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "react native code view",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/musicode/react-native-pure-code-view#readme",
   "dependencies": {
-    "prop-types": "^15.6.2"
+    "prop-types": "^15.7.2"
   }
 }

@@ -35,6 +35,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9D43E9FA223F89C000FD8DDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D921E2A21CBB6E60083C779 /* libRNTCodeView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNTCodeView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D921E2D21CBB6E60083C779 /* RNTBarCodeViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNTBarCodeViewManager.h; sourceTree = "<group>"; };
 		9D921E2E21CBB6E60083C779 /* RNTBarCodeViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTBarCodeViewManager.m; sourceTree = "<group>"; };
@@ -92,6 +93,7 @@
 				9D921E8621CBE0030083C779 /* RNTCodeScannerManager.m */,
 				9D921E8821CBE2500083C779 /* RNTCodeScanner.h */,
 				9D921E8921CBE2500083C779 /* RNTCodeScanner.m */,
+				9D43E9FA223F89C000FD8DDC /* Assets.xcassets */,
 			);
 			path = RNTCodeView;
 			sourceTree = "<group>";
