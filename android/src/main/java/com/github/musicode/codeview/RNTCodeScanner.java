@@ -29,6 +29,7 @@ class RNTCodeScanner extends CodeScanner implements LifecycleEventListener {
 
     public RNTCodeScanner(ThemedReactContext reactContext) {
         super(reactContext);
+        setActivity(reactContext.getCurrentActivity());
         reactContext.addLifecycleEventListener(this);
         Choreographer.getInstance().postFrameCallback(frameCallback);
     }
@@ -37,6 +38,7 @@ class RNTCodeScanner extends CodeScanner implements LifecycleEventListener {
         stop();
         ((ThemedReactContext)getContext()).removeLifecycleEventListener(this);
         Choreographer.getInstance().removeFrameCallback(frameCallback);
+        setActivity(null);
     }
 
     @Override

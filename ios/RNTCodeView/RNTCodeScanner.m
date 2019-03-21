@@ -25,8 +25,8 @@
                          });
 }
 
-- (void)codeScannerWillScanWithoutPermissions:(CodeScanner *)codeScanner {
-    self.onScanWithoutPermissions(@{});
+- (void)codeScannerDidPermissionsNotGranted:(CodeScanner *)codeScanner {
+    self.onPermissionsNotGranted(@{});
 }
 
 - (void)codeScannerDidPermissionsGranted:(CodeScanner *)codeScanner {

@@ -15,7 +15,7 @@ class CodeScanner extends PureComponent {
     title: PropTypes.string.isRequired,
     style: ViewPropTypes.style,
     onScanSuccess: PropTypes.func,
-    onScanWithoutPermissions: PropTypes.func,
+    onPermissionsNotGranted: PropTypes.func,
     onPermissionsGranted: PropTypes.func,
     onPermissionsDenied: PropTypes.func,
   }
@@ -27,10 +27,10 @@ class CodeScanner extends PureComponent {
     }
   }
 
-  handleScanWithoutPermissions = event => {
-    let { onScanWithoutPermissions } = this.props
-    if (onScanWithoutPermissions) {
-      onScanWithoutPermissions(event.nativeEvent)
+  handlePermissionsNotGranted = event => {
+    let { onPermissionsNotGranted } = this.props
+    if (onPermissionsNotGranted) {
+      onPermissionsNotGranted(event.nativeEvent)
     }
   }
 
@@ -53,7 +53,7 @@ class CodeScanner extends PureComponent {
       <RNTCodeScanner
         {...this.props}
         onScanSuccess={this.handleScanSuccess}
-        onScanWithoutPermissions={this.handleScanWithoutPermissions}
+        onPermissionsNotGranted={this.handlePermissionsNotGranted}
         onPermissionsGranted={this.handlePermissionsGranted}
         onPermissionsDenied={this.handlePermissionsDenied}
       />

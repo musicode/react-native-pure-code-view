@@ -137,7 +137,7 @@ public class CodeScanner: UIView {
         }
         
         guard let device = pickDevice() else {
-            delegate.codeScannerWillScanWithoutPermissions(self)
+            delegate.codeScannerDidPermissionsNotGranted(self)
             return
         }
         
@@ -183,7 +183,7 @@ public class CodeScanner: UIView {
             break
         default:
             // 拒绝
-            self.delegate.codeScannerWillScanWithoutPermissions(self)
+            self.delegate.codeScannerDidPermissionsNotGranted(self)
             break
         }
         
