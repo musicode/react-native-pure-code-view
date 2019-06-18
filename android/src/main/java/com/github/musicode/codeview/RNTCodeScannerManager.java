@@ -15,8 +15,6 @@ import com.facebook.react.uimanager.annotations.ReactProp;
 import com.facebook.react.uimanager.events.RCTEventEmitter;
 import com.github.herokotlin.code.CodeScannerCallback;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Map;
 
 public class RNTCodeScannerManager extends SimpleViewManager<RNTCodeScanner> {
@@ -46,14 +44,14 @@ public class RNTCodeScannerManager extends SimpleViewManager<RNTCodeScanner> {
 
         scanner.callback = new CodeScannerCallback() {
             @Override
-            public void onScanSuccess(@NotNull String text) {
+            public void onScanSuccess(String text) {
                 WritableMap event = Arguments.createMap();
                 event.putString("text", text);
                 reactContext.getJSModule(RCTEventEmitter.class).receiveEvent(scanner.getId(), "onScanSuccess", event);
             }
 
             @Override
-            public void onRequestPermissions(@NotNull Activity activity, @NotNull String[] permissions, int requestCode) {
+            public void onRequestPermissions(Activity activity, String[] permissions, int requestCode) {
                 if (activity instanceof ReactActivity) {
                     ((ReactActivity)activity).requestPermissions(permissions, requestCode, listener);
                 }
