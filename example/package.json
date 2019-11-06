@@ -12,7 +12,7 @@
   "dependencies": {
     "react": "16.9.0",
     "react-native": "0.61.4",
-    "react-native-pure-code-view": "^0.1.5"
+    "react-native-pure-code-view": "^0.1.6"
   },
   "devDependencies": {
     "@babel/core": "^7.7.0",
