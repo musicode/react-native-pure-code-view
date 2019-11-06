@@ -1,6 +1,6 @@
 
 #import "RNTQRCodeViewManager.h"
-#import "RNTCodeView-Swift.h"
+#import "react_native_pure_code_view-Swift.h"
 
 @implementation RNTQRCodeViewManager
 

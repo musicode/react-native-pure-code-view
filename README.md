@@ -10,6 +10,7 @@ There are three native views in this module.
 
 ```
 npm i react-native-pure-code-view
+// link below 0.60
 react-native link react-native-pure-code-view
 ```
 
