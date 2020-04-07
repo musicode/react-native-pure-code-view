@@ -137,7 +137,6 @@ public class CodeScanner: UIView {
         }
         
         guard let device = pickDevice() else {
-            delegate.codeScannerDidPermissionsNotGranted(self)
             return
         }
         
@@ -159,33 +158,6 @@ public class CodeScanner: UIView {
         captureSession.startRunning()
         
         isPreviewing = true
-        
-    }
-    
-    private func requestPermissions() {
-        
-        switch AVCaptureDevice.authorizationStatus(for: .video) {
-        case .authorized:
-            prepareDevice()
-            break
-        case .notDetermined:
-            AVCaptureDevice.requestAccess(for: .video) { granted in
-                DispatchQueue.main.async {
-                    if granted {
-                        self.prepareDevice()
-                        self.delegate.codeScannerDidPermissionsGranted(self)
-                    }
-                    else {
-                        self.delegate.codeScannerDidPermissionsDenied(self)
-                    }
-                }
-            }
-            break
-        default:
-            // 拒绝
-            self.delegate.codeScannerDidPermissionsNotGranted(self)
-            break
-        }
         
     }
     
@@ -346,11 +318,6 @@ public class CodeScanner: UIView {
     
     @objc private func onTorchToggle() {
         isTorchOn = !isTorchOn
-    }
-    
-    public override func didMoveToWindow() {
-        super.didMoveToWindow()
-        requestPermissions()
     }
     
     public override func layoutSubviews() {

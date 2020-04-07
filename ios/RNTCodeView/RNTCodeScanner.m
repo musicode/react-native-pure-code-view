@@ -25,16 +25,4 @@
                          });
 }
 
-- (void)codeScannerDidPermissionsNotGranted:(CodeScanner *)codeScanner {
-    self.onPermissionsNotGranted(@{});
-}
-
-- (void)codeScannerDidPermissionsGranted:(CodeScanner *)codeScanner {
-    self.onPermissionsGranted(@{});
-}
-
-- (void)codeScannerDidPermissionsDenied:(CodeScanner *)codeScanner {
-    self.onPermissionsDenied(@{});
-}
-
 @end

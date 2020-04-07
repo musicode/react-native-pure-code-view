@@ -16,8 +16,5 @@ RCT_CUSTOM_VIEW_PROPERTY(title, NSString, RNTCodeScanner) {
 }
 
 RCT_EXPORT_VIEW_PROPERTY(onScanSuccess, RCTBubblingEventBlock);
-RCT_EXPORT_VIEW_PROPERTY(onPermissionsNotGranted, RCTBubblingEventBlock);
-RCT_EXPORT_VIEW_PROPERTY(onPermissionsGranted, RCTBubblingEventBlock);
-RCT_EXPORT_VIEW_PROPERTY(onPermissionsDenied, RCTBubblingEventBlock);
 
 @end

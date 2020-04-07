@@ -59,12 +59,15 @@ import {
   style={styles.qrcode}
 />
 
+// At first, make sure you have the permissions.
+// ios: CAMERA
+// android: CAMERA
+
+// If you don't have these permissions, you can't use CodeScanner.
+
 // CodeScanner
-<QRCodeView
+<CodeScanner
   title="将二维码放入框内，即可自动扫描"
   onScanSuccess={this.handleScanSuccess}
-  onPermissionsNotGranted={this.handlePermissionsNotGranted}
-  onPermissionsGranted={this.handlePermissionsGranted}
-  onPermissionsDenied={this.handlePermissionsDenied}
   style={styles.codeScanner}
 />
