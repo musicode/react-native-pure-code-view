@@ -26,7 +26,6 @@ class RNTCodeScanner(reactContext: ThemedReactContext) : CodeScanner(reactContex
     }
 
     init {
-        activity = reactContext.currentActivity
         reactContext.addLifecycleEventListener(this)
         Choreographer.getInstance().postFrameCallback(frameCallback)
     }
@@ -35,7 +34,6 @@ class RNTCodeScanner(reactContext: ThemedReactContext) : CodeScanner(reactContex
         stop()
         (context as ThemedReactContext).removeLifecycleEventListener(this)
         Choreographer.getInstance().removeFrameCallback(frameCallback)
-        activity = null
     }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
