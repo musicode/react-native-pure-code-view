@@ -4,7 +4,7 @@ import Foundation
 
 @objc public class CodeScannerConfiguration: NSObject {
     
-    public var viewFinderMaskColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.61)
+    public var viewFinderMaskColor = UIColor.black.withAlphaComponent(0.61)
     
     public var viewFinderCornerColor = UIColor(red: 1, green: 0.48, blue: 0.03, alpha: 1)
     
@@ -14,11 +14,11 @@ import Foundation
     
     public var viewFinderBorderWidth = 1 / UIScreen.main.scale
     
-    public var viewFinderBorderColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.6)
+    public var viewFinderBorderColor = UIColor.white.withAlphaComponent(0.6)
     
     public var guideLabelTextFont = UIFont.systemFont(ofSize: 12)
     
-    public var guideLabelTextColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.7)
+    public var guideLabelTextColor = UIColor.white.withAlphaComponent(0.7)
     
     public var guideLabelMarginTop: CGFloat = 14
     

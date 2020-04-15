@@ -127,15 +127,12 @@ public class CodeScanner: UIView {
         backgroundColor = .clear
 
         updateView()
+        prepareDevice()
         
     }
     
     private func prepareDevice() {
-        
-        guard !isPreviewing else {
-            return
-        }
-        
+
         guard let device = pickDevice() else {
             return
         }
