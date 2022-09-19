@@ -4,7 +4,6 @@ import React, {
 
 import {
   requireNativeComponent,
-  ViewPropTypes,
 } from 'react-native'
 
 import PropTypes from 'prop-types'
@@ -13,7 +12,7 @@ class BarCodeView extends PureComponent {
 
   static propTypes = {
     text: PropTypes.string.isRequired,
-    style: ViewPropTypes.style,
+    style: PropTypes.any,
   }
 
   render() {

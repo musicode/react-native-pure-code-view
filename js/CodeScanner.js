@@ -4,7 +4,6 @@ import React, {
 
 import {
   requireNativeComponent,
-  ViewPropTypes,
 } from 'react-native'
 
 import PropTypes from 'prop-types'
@@ -13,7 +12,7 @@ class CodeScanner extends PureComponent {
 
   static propTypes = {
     title: PropTypes.string.isRequired,
-    style: ViewPropTypes.style,
+    style: PropTypes.any,
     onScanSuccess: PropTypes.func,
   }
 

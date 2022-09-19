@@ -1,6 +1,6 @@
 {
   "name": "react-native-pure-code-view",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "qrcode, barcode, scanner for react native",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/musicode/react-native-pure-code-view#readme",
   "dependencies": {
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.8.1"
   }
 }
